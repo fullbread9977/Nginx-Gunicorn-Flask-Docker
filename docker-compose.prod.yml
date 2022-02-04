@@ -15,7 +15,7 @@ services:
   #restart: always
   volumes:
     - ./backend/flask_app:/usr/src/app
-  command: gunocprn -w 1 -b 0.0.0.0:5000 wsgi:app
+  command: gunocorn -w 1 -b 0.0.0.0:5000 wsgi:app
 
   backend:
     build: 
