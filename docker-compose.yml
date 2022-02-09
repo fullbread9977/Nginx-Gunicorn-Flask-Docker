@@ -16,7 +16,7 @@ services:
     restart: always
     volumes:
       - ./backend/flask_app:/usr/src/app
-    command: gunocorn -w 1 -b 0.0.0.0:5000 wsgi:app
+    command: gunicorn -w 1 -b 0.0.0.0:5000 wsgi:app
 
   mongo_db:
     image: mongo:latest
